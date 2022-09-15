@@ -142,6 +142,7 @@ body, html {height: 100%}
   color: #ffffff !important;
   position: relative;
   cursor: pointer;
+  background-color: #0000008c;
 }
 
 .btn-disconnect {
@@ -183,7 +184,7 @@ body, html {height: 100%}
   line-height: 30px;
   padding: 0 2px;
   min-width: 35px;
-  background-color: #00000062;
+  background-color: #00000088;
   text-align: center;
   border-radius: 100px;
   margin-left: 5px;
@@ -507,8 +508,11 @@ input:disabled{
   font-size: xx-large;
   font-family: 'Shrikhand', cursive;
   color: #ffffff;
-  background-color: #00000033;
+  background-color: #00000086;
   border-radius: 90px;  
+  border-style: double;
+  border-width: 15px;
+  padding: 50px;
 }
 
 .totalNumber {
@@ -524,11 +528,11 @@ input:disabled{
 .premint {
   font-family: 'Shrikhand', cursive;
   font-size: xxx-large;
-  color: #d4d4dc;
+  color: #ffffff;
   outline: #000000;
-  border: #000000;
+  border: #ffffff;
   border-style: double;
   border-width: 5px;
-  background-color: #00000059;
+  background-color: #00000080;
   padding: 15px;
 }

@@ -9,7 +9,7 @@ import whiteListImg from "./images/Whitelist Sale.png"
 import footer from "./images/footer.png"
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import videoSrc from './images/Flight Club Gallery Final.mp4';
+import videoSrc from './images/citynight.MP4';
 
 import ERC721a from './contract/ERC721A.json';
 import { ethers, utils } from "ethers";
@@ -198,7 +198,7 @@ function MainComponent() {
         {
           !isStarted && (
             <div className="count-down">
-              <Countdown className="mt-5" date={new Date("2022-10-17T16:00:00+0000")} renderer={renderer} />
+              <Countdown className="mt-5" date={new Date("2022-11-17T16:00:00+0000")} renderer={renderer} />
               
             </div>
           )
@@ -215,8 +215,8 @@ function MainComponent() {
             <>
               <div>
                 
-                <div class='h' className="totalMint">Total Minted</div>
-             <div className="totalNumber"> {totalSupply} / 10000 </div>
+                <div class='h' className="totalMint">Total Minted<div > {totalSupply} / 10200 </div></div>
+             
                 <div className="qty">
                   
                   <span className="minus bg-dark" onClick={(e) => setMintCount(mintCount > 1 ? mintCount - 1 : 1)}>-</span>
