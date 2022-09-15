@@ -116,7 +116,7 @@ body, html {height: 100%}
 .count-down {
   font-size: 33px;
   font-family: 'Bangers', cursive;
-  color: #ffffff;
+  color: #ffffff00;
 }
 
 
@@ -519,4 +519,15 @@ input:disabled{
   border-radius: 90px;
   border-top: #000000;
 
+}
+
+.premint {
+  font-family: 'Shrikhand', cursive;
+  font-size: xxx-large;
+  color: #d4d4dc;
+  outline: #000000;
+  border: #000000;
+  border-style: double;
+  background-color: #00000059;
+  padding: 10px;
 }

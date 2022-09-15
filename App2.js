@@ -113,7 +113,7 @@ function MainComponent() {
       // Render a countdown
       return (
         <div className="count-down">
-          <div className="premint"><div>Prepare For Flight</div> MINTING SOON</div>
+          <img style={{ width: 380 }} className="whitelist-img" src={whiteListImg} /> <br/>
           {days > 0 ? (<span className="count-box">{days}d</span>) : ''}
           <span className="count-box">{hours}h</span>
           <span className="count-box">{minutes}m</span>
