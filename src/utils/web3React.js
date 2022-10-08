@@ -4,13 +4,13 @@ import { ethers } from "ethers";
 
 const RPC_URLS = {
   1: "https://mainnet.infura.io/v3/6ff37f3b33474c90b115571657bad792",
-  4: "https://rinkeby.infura.io/v3/6ff37f3b33474c90b115571657bad792"
+  5: "https://goerli.infura.io/v3/6ff37f3b33474c90b115571657bad792"
 };
 const POLLING_INTERVAL = 12000;
 const rpcUrl = RPC_URLS[1];//getNodeUrl();
 const chainId = parseInt(1, 10);
 
-export const injected = new InjectedConnector({ supportedChainIds: [1, 4] });
+export const injected = new InjectedConnector({ supportedChainIds: [1, 5] });
 
 export const walletconnect = new WalletConnectConnector({
   chainId: 1,

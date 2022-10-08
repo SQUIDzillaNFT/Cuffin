@@ -43,11 +43,6 @@
       },
       {
          "inputs": [],
-         "name": "MintedQueryForZeroAddress",
-         "type": "error"
-      },
-      {
-         "inputs": [],
          "name": "OwnerIndexOutOfBounds",
          "type": "error"
       },
@@ -181,8 +176,26 @@
          "type": "event"
       },
       {
+         "inputs": [
+            {
+               "internalType": "uint256",
+               "name": "quantity",
+               "type": "uint256"
+            },
+            {
+               "internalType": "address",
+               "name": "_to",
+               "type": "address"
+            }
+         ],
+         "name": "Devmint",
+         "outputs": [],
+         "stateMutability": "nonpayable",
+         "type": "function"
+      },
+      {
          "inputs": [],
-         "name": "MAX_MINT_WHITELIST",
+         "name": "MAX_SUPPLY",
          "outputs": [
             {
                "internalType": "uint256",
@@ -196,19 +209,18 @@
       {
          "inputs": [
             {
-               "internalType": "address",
-               "name": "addr",
+               "internalType": "uint256",
+               "name": "_amount",
+               "type": "uint256"
+            },
+            {
+               "internalType": "address payable",
+               "name": "_to",
                "type": "address"
             }
          ],
-         "name": "addAddressToWhitelist",
-         "outputs": [
-            {
-               "internalType": "bool",
-               "name": "success",
-               "type": "bool"
-            }
-         ],
+         "name": "altWithdraw",
+         "outputs": [],
          "stateMutability": "nonpayable",
          "type": "function"
       },
@@ -263,20 +275,6 @@
          "type": "function"
       },
       {
-         "inputs": [],
-         "name": "flipPrivateSaleState",
-         "outputs": [],
-         "stateMutability": "nonpayable",
-         "type": "function"
-      },
-      {
-         "inputs": [],
-         "name": "flipSaleState",
-         "outputs": [],
-         "stateMutability": "nonpayable",
-         "type": "function"
-      },
-      {
          "inputs": [
             {
                "internalType": "uint256",
@@ -314,38 +312,6 @@
                "internalType": "bool",
                "name": "",
                "type": "bool"
-            }
-         ],
-         "stateMutability": "view",
-         "type": "function"
-      },
-      {
-         "inputs": [
-            {
-               "internalType": "address",
-               "name": "addr",
-               "type": "address"
-            }
-         ],
-         "name": "isWhitelisted",
-         "outputs": [
-            {
-               "internalType": "bool",
-               "name": "isWhiteListed",
-               "type": "bool"
-            }
-         ],
-         "stateMutability": "view",
-         "type": "function"
-      },
-      {
-         "inputs": [],
-         "name": "maxSupply",
-         "outputs": [
-            {
-               "internalType": "uint256",
-               "name": "",
-               "type": "uint256"
             }
          ],
          "stateMutability": "view",
@@ -417,63 +383,6 @@
                "internalType": "address",
                "name": "",
                "type": "address"
-            }
-         ],
-         "stateMutability": "view",
-         "type": "function"
-      },
-      {
-         "inputs": [
-            {
-               "internalType": "uint256",
-               "name": "_amount",
-               "type": "uint256"
-            },
-            {
-               "internalType": "address payable",
-               "name": "_to",
-               "type": "address"
-            }
-         ],
-         "name": "partialWithdraw",
-         "outputs": [],
-         "stateMutability": "nonpayable",
-         "type": "function"
-      },
-      {
-         "inputs": [],
-         "name": "privateMintPrice",
-         "outputs": [
-            {
-               "internalType": "uint256",
-               "name": "",
-               "type": "uint256"
-            }
-         ],
-         "stateMutability": "view",
-         "type": "function"
-      },
-      {
-         "inputs": [],
-         "name": "privateSaleIsActive",
-         "outputs": [
-            {
-               "internalType": "bool",
-               "name": "",
-               "type": "bool"
-            }
-         ],
-         "stateMutability": "view",
-         "type": "function"
-      },
-      {
-         "inputs": [],
-         "name": "publicmintPrice",
-         "outputs": [
-            {
-               "internalType": "uint256",
-               "name": "",
-               "type": "uint256"
             }
          ],
          "stateMutability": "view",
@@ -589,46 +498,14 @@
                "type": "uint256"
             }
          ],
-         "name": "setPrivateMintPrice",
-         "outputs": [],
-         "stateMutability": "nonpayable",
-         "type": "function"
-      },
-      {
-         "inputs": [
-            {
-               "internalType": "uint256",
-               "name": "_price",
-               "type": "uint256"
-            }
-         ],
          "name": "setPublicMintPrice",
          "outputs": [],
          "stateMutability": "nonpayable",
          "type": "function"
       },
       {
-         "inputs": [
-            {
-               "internalType": "uint256",
-               "name": "_mintRate",
-               "type": "uint256"
-            }
-         ],
-         "name": "setPublicRate",
-         "outputs": [],
-         "stateMutability": "nonpayable",
-         "type": "function"
-      },
-      {
-         "inputs": [
-            {
-               "internalType": "address[]",
-               "name": "addrs",
-               "type": "address[]"
-            }
-         ],
-         "name": "setWhitelistAddr",
+         "inputs": [],
+         "name": "setSaleActive",
          "outputs": [],
          "stateMutability": "nonpayable",
          "type": "function"
@@ -777,48 +654,19 @@
          "type": "function"
       },
       {
-         "inputs": [
-            {
-               "internalType": "address",
-               "name": "",
-               "type": "address"
-            }
-         ],
-         "name": "whitelist",
-         "outputs": [
-            {
-               "internalType": "address",
-               "name": "addr",
-               "type": "address"
-            },
-            {
-               "internalType": "uint256",
-               "name": "claimAmount",
-               "type": "uint256"
-            },
-            {
-               "internalType": "uint256",
-               "name": "hasMinted",
-               "type": "uint256"
-            }
-         ],
-         "stateMutability": "view",
-         "type": "function"
-      },
-      {
          "inputs": [],
          "name": "withdraw",
          "outputs": [],
-         "stateMutability": "payable",
+         "stateMutability": "nonpayable",
          "type": "function"
       }
    ],
    "networks": {
-      "4": {
+      "1": {
          "events": {},
          "links": {},
-         "address": "0xFB848DfEEED4D4202422aCB82f13e7Fe6958a4A1",
-         "transactionHash": "0x701eb3385c5523db9b703178c2fb7080702da0a02d3fdb7fbbc4cca07532d926"
+         "address": "0xd4d4a7002e17841cae72c33116f2b172d66d9b4a",
+         "transactionHash": "0x10d17e684820c6797c82fce1b73e7fe20bcf348a55a6fe12a8d1614f70e63449"
       }
    }
 }

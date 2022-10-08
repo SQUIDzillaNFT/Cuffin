@@ -64,12 +64,12 @@ function MainComponent() {
         console.log('wallet', wallet);
         if (wallet.provider) {
           let ethersProvider = new ethers.providers.Web3Provider(wallet.provider);
-          let _nftContract = new ethers.Contract(ERC721a.networks[4].address, ERC721a.abi, ethersProvider.getUncheckedSigner());
+          let _nftContract = new ethers.Contract(ERC721a.networks[1].address, ERC721a.abi, ethersProvider.getUncheckedSigner());
           setContract(_nftContract);
           let _totalSupply = await _nftContract.totalSupply();
           console.log(totalSupply);
           setTotalSupply(Number(_totalSupply));
-          let _maxTokenNumber = await _nftContract.maxSupply();
+          let _maxTokenNumber = await _nftContract.MAX_SUPPLY;
           setMaxTokenNumber(Number(_maxTokenNumber));
           setStatusShow(true);
         }
@@ -139,12 +139,9 @@ function MainComponent() {
       console.log('contract', contract);
       let _totalSupply = await contract.totalSupply();
       setTotalSupply(Number(_totalSupply));
-      const privateSale = await contract.privateSaleIsActive();
+      const saleIsActive = await contract.saleIsActive();
       let mintPrice = 0;
-      if (privateSale) {
-        setMaxMintCount(2);
-        mintPrice = await contract.privateMintPrice();
-      } else {
+      if (saleIsActive) {
         mintPrice = await contract.mintRate();
       }
       const price = Number(mintPrice) * numberofTokens;
@@ -198,7 +195,7 @@ function MainComponent() {
         {
           !isStarted && (
             <div className="count-down">
-              <Countdown className="mt-5" date={new Date("2022-11-17T16:00:00+0000")} renderer={renderer} />
+              <Countdown className="mt-5" date={new Date("2022-10-30T16:00:00+0000")} renderer={renderer} />
               
             </div>
           )

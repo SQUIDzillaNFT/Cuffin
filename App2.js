@@ -64,7 +64,7 @@ function MainComponent() {
         console.log('wallet', wallet);
         if (wallet.provider) {
           let ethersProvider = new ethers.providers.Web3Provider(wallet.provider);
-          let _nftContract = new ethers.Contract(ERC721a.networks[4].address, ERC721a.abi, ethersProvider.getUncheckedSigner());
+          let _nftContract = new ethers.Contract(ERC721a.networks[5].address, ERC721a.abi, ethersProvider.getUncheckedSigner());
           setContract(_nftContract);
           let _totalSupply = await _nftContract.totalSupply();
           console.log(totalSupply);
