@@ -113,7 +113,7 @@ function MainComponent() {
       // Render a countdown
       return (
         <div className="count-down">
-          <div className="premint"><div>Prepare For Flight</div> MINTING SOON</div>
+          <div className="premint"> Mint begins</div><br/>
           {days > 0 ? (<span className="count-box">{days}d</span>) : ''}
           <span className="count-box">{hours}h</span>
           <span className="count-box">{minutes}m</span>
@@ -195,7 +195,7 @@ function MainComponent() {
         {
           !isStarted && (
             <div className="count-down">
-              <Countdown className="mt-5" date={new Date("2022-10-30T16:00:00+0000")} renderer={renderer} />
+              <Countdown className="mt-5" date={new Date("2022-10-14T23:30:00-0300")} renderer={renderer} />
               
             </div>
           )
@@ -212,7 +212,7 @@ function MainComponent() {
             <>
               <div>
                 
-                <div class='h' className="totalMint">Total Minted<div > {totalSupply} / 10200 </div></div>
+                <div class='h' className="totalMint">Total Minted<div > {totalSupply}</div></div>
              
                 <div className="qty">
                   
