@@ -1,20 +1,20 @@
 import Onboard from 'bnc-onboard'
 
 const ACTIVE_NETWORK_ID = 1
-const INFURA_KEY = "6ff37f3b33474c90b115571657bad792"
+const INFURA_KEY = "8ebf99c71be74a93bb0443730be97a7b"
 const APP_URL = "https://www.flightclubmint.com"
 const CONTACT_EMAIL = "nrwisch@gmail.com"
-const RPC_URL = "https://mainnet.infura.io/v3/6ff37f3b33474c90b115571657bad792"
+const RPC_URL = "https://mainnet.infura.io/v3/8ebf99c71be74a93bb0443730be97a7b"
 const APP_NAME = "Prepare For Flight BAP"
 
 const wallets = [
   { walletName: "metamask" },
   {
     walletName: "walletConnect",
-    infuraKey: INFURA_KEY
+    infuraKey: INFURA_KEY,
+    bridge: "https://derelay.rabby.io/"
   },
-  { walletName: "coinbase"},
-  { walletName: "trust", rpcUrl: RPC_URL},
+  { walletName: "coinbase"}
 
 ]
 

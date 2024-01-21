@@ -3,8 +3,8 @@ import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { ethers } from "ethers";
 
 const RPC_URLS = {
-  1: "https://mainnet.infura.io/v3/6ff37f3b33474c90b115571657bad792",
-  5: "https://goerli.infura.io/v3/6ff37f3b33474c90b115571657bad792"
+  1: "https://mainnet.infura.io/v3/8ebf99c71be74a93bb0443730be97a7b",
+  5: "https://goerli.infura.io/v3/8ebf99c71be74a93bb0443730be97a7b"
 };
 const POLLING_INTERVAL = 12000;
 const rpcUrl = RPC_URLS[1];//getNodeUrl();
@@ -16,7 +16,7 @@ export const walletconnect = new WalletConnectConnector({
   chainId: 1,
   rpc: { 1: RPC_URLS[1] },
   qrcode: true,
-  bridge: "https://bridge.walletconnect.org",
+ // bridge: "https://bridge.walletconnect.org",
   pollingInterval: POLLING_INTERVAL,
 });
 
